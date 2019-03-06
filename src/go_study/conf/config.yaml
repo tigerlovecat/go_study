@@ -1,0 +1,41 @@
+runmode: release               # 开发模式, debug, release, test
+addr: :8080                    # HTTP绑定端口
+name: web_framework            # API Server的名字
+# url: http://127.0.0.1:8080   # pingServer函数请求的API服务器的ip:port
+# max_ping_count: 10           # pingServer函数try的次数
+sver: 100                      # APP系统版本号 当前版本为1.0.0 代号100
+p4pclient_sver: 100            # 下载模块版本号 当前版本为1.0.0 代号100
+st_ver: 1.0.105                # 连乐默认系统版本号 当前版本为1.0.105
+app_sk: pgCyF9XWVzyGEvbbanXKX8v4w0MOjBbu # APP 秘钥
+p4pclient_sk: AAqKMbspe8iKNGfvclU91SQBmncul4is # 下载模块 秘钥
+yunpian_apikey: 823b4bb5ee0d6f678bb298fb89e1bf11 # 发送短信 秘钥
+yyets_v3_key: 519f9cab85c8059d17544947k361a827 # 调用V3接口Key
+jwt_secret: Rtg8BPKNEf2mB4mgvKONGPZZQSaJWNLijxR42qRgq0iBb5
+tls:
+  addr: :8081
+  cert: conf/server.crt
+  key: conf/server.key
+log:
+  # debug=5, info=4, warning=3, error=2, fatal=1, panic=0
+  logger_level: 5
+  logger_file: log/web_framework.log
+  # "json", "text"
+  logger_type: "text"
+db:
+  type: mysql
+  name: yyetsnew
+  dsn: root:yyets@12345678@(58.222.20.252:3307)/yyetsnew?parseTime=true&charset=utf8
+redis:
+#   url: "192.168.2.228:6379"
+#   password: ""
+   url: "58.222.20.252:6379"
+   password: "yyets@redis"
+lianle: #联乐token获取账号
+  account: "rrys"
+  password: "rr123456"
+  key: "lianle(*&^%!@#$)"
+email:
+  host: "smtp.exmail.qq.com"
+  port: 465
+  user: "noreply@cvn.io"
+  password: "Lsj123456"
